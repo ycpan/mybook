@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [日常办公](mac/终端配置.md)
+    * [gitbook](问题/无法跳转.md)
 * [Part I](part1/README.md)
     * [Writing is nice](part1/writing.md)
     * [GitBook is nice](part1/gitbook.md)
