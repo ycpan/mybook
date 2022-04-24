@@ -1,7 +1,7 @@
 {
-    "title": "Blankj's Glory",
-    "author": "Blankj",
-    "description": "select * from learn",
+    "title": "潘勇灿的book",
+    "author": "ycpan",
+    "description": "探索知识的海洋",
     "language": "zh-hans",
     "gitbook": "3.2.3",
     "styles": {
@@ -12,7 +12,7 @@
     },
     "links": {
         "sidebar": {
-            "我的狗窝": "https://blankj.com"
+            "我的主页": "https://ycpan.github.io/mybook/"
         }
     },
     "plugins": [
@@ -30,12 +30,12 @@
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/Blankj"
+            "url": "https://github.com/ycpan"
         },
         "github-buttons": {
             "buttons": [{
-                "user": "Blankj",
-                "repo": "glory",
+                "user": "ycpan",
+                "repo": "mybook",
                 "type": "star",
                 "size": "small",
                 "count": true
