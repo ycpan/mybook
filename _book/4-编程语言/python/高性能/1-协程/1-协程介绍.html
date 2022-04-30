@@ -1,0 +1,2670 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>协程介绍 · 潘勇灿的book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ycpan">
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../../../Read/README1.html" />
+    
+    
+
+    
+        <link rel="shortcut icon" href='../../../../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"ycpan","repo":"mybook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://ycpan.github.io/mybook/" target="_blank" class="custom-link">我的主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">知识体系</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Gitbook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../../0-知识体系/0-gitbook/1-gitbook安装与初步使用.html">
+            
+                <a href="../../../../0-知识体系/0-gitbook/1-gitbook安装与初步使用.html">
+            
+                    
+                    Gitbook安装与初步使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../../0-知识体系/0-gitbook/2-gitbook配置文件.html">
+            
+                <a href="../../../../0-知识体系/0-gitbook/2-gitbook配置文件.html">
+            
+                    
+                    Gitbook配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../../0-知识体系/0-gitbook/3-无法跳转.html">
+            
+                <a href="../../../../0-知识体系/0-gitbook/3-无法跳转.html">
+            
+                    
+                    无法跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Node
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../../0-知识体系/1-node/3-npm常用命名.html">
+            
+                <a href="../../../../0-知识体系/1-node/3-npm常用命名.html">
+            
+                    
+                    Npm常用命名
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">日常办公</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Mac
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../../1-日常办公/1-mac/终端配置.html">
+            
+                <a href="../../../../1-日常办公/1-mac/终端配置.html">
+            
+                    
+                    终端配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">后台</li>
+        
+        
+    
+
+    
+        
+        <li class="header">前端</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Node Modules
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../../../3-前端/node_modules/balanced-match/README.md">
+            
+                <span>
+            
+                    
+                    Balanced Match
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../../../3-前端/node_modules/balanced-match/LICENSE.md">
+            
+                <span>
+            
+                    
+                    LICENSE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../../../3-前端/node_modules/boolbase/README.md">
+            
+                <span>
+            
+                    
+                    Boolbase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../../../3-前端/node_modules/brace-expansion/README.md">
+            
+                <span>
+            
+                    
+                    Brace Expansion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../../../3-前端/node_modules/cheerio/README.md">
+            
+                <span>
+            
+                    
+                    Cheerio
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.4.1" data-path="../../../../3-前端/node_modules/cheerio/History.md">
+            
+                <span>
+            
+                    
+                    History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.2" data-path="../../../../3-前端/node_modules/cheerio/Readme.md">
+            
+                <span>
+            
+                    
+                    Readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4.3" >
+            
+                <span>
+            
+                    
+                    Lib
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.4.3.1" >
+            
+                <span>
+            
+                    
+                    Api
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../../../3-前端/node_modules/colors/README.md">
+            
+                <span>
+            
+                    
+                    Colors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.5.1" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.2" >
+            
+                <span>
+            
+                    
+                    Lib
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.5.2.1" >
+            
+                <span>
+            
+                    
+                    Custom
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.2.2" >
+            
+                <span>
+            
+                    
+                    Maps
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.2.3" >
+            
+                <span>
+            
+                    
+                    System
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5.3" >
+            
+                <span>
+            
+                    
+                    Themes
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" >
+            
+                <span>
+            
+                    
+                    Concat Map
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.6.1" >
+            
+                <span>
+            
+                    
+                    Example
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6.2" >
+            
+                <span>
+            
+                    
+                    Test
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../../../3-前端/node_modules/css-select/README.md">
+            
+                <span>
+            
+                    
+                    Css Select
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" >
+            
+                <span>
+            
+                    
+                    Lib
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../../../3-前端/node_modules/css-what/README.md">
+            
+                <span>
+            
+                    
+                    Css What
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.8.1" data-path="../../../../3-前端/node_modules/css-what/readme.md">
+            
+                <span>
+            
+                    
+                    Readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../../../3-前端/node_modules/daggy/README.md">
+            
+                <span>
+            
+                    
+                    Daggy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.9.1" data-path="../../../../3-前端/node_modules/daggy/README.old.md">
+            
+                <span>
+            
+                    
+                    README.Old
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" >
+            
+                <span>
+            
+                    
+                    Dom Serializer
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../../../../3-前端/node_modules/domelementtype/README.md">
+            
+                <span>
+            
+                    
+                    Domelementtype
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.11.1" data-path="../../../../3-前端/node_modules/domelementtype/readme.md">
+            
+                <span>
+            
+                    
+                    Readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../../../../3-前端/node_modules/domhandler/README.md">
+            
+                <span>
+            
+                    
+                    Domhandler
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.12.1" >
+            
+                <span>
+            
+                    
+                    Lib
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12.2" data-path="../../../../3-前端/node_modules/domhandler/readme.md">
+            
+                <span>
+            
+                    
+                    Readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12.3" >
+            
+                <span>
+            
+                    
+                    Test
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.12.3.1" >
+            
+                <span>
+            
+                    
+                    Cases
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13" data-path="../../../../3-前端/node_modules/domutils/README.md">
+            
+                <span>
+            
+                    
+                    Domutils
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.13.1" >
+            
+                <span>
+            
+                    
+                    Lib
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13.2" data-path="../../../../3-前端/node_modules/domutils/readme.md">
+            
+                <span>
+            
+                    
+                    Readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.13.3" >
+            
+                <span>
+            
+                    
+                    Test
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.13.3.1" >
+            
+                <span>
+            
+                    
+                    Tests
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14" data-path="../../../../3-前端/node_modules/entities/README.md">
+            
+                <span>
+            
+                    
+                    Entities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.14.1" >
+            
+                <span>
+            
+                    
+                    Lib
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14.2" >
+            
+                <span>
+            
+                    
+                    Maps
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14.3" data-path="../../../../3-前端/node_modules/entities/readme.md">
+            
+                <span>
+            
+                    
+                    Readme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.14.4" >
+            
+                <span>
+            
+                    
+                    Test
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.15" >
+            
+                <span>
+            
+                    
+                    Fantasy Identities
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16" data-path="../../../../3-前端/node_modules/folktale/README.md">
+            
+                <span>
+            
+                    
+                    Folktale
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.1" data-path="../../../../3-前端/node_modules/folktale/CHANGELOG.md">
+            
+                <span>
+            
+                    
+                    CHANGELOG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.2" >
+            
+                <span>
+            
+                    
+                    Adt
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.2.1" >
+            
+                <span>
+            
+                    
+                    Union
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.2.1.1" >
+            
+                <span>
+            
+                    
+                    Derivations
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3" >
+            
+                <span>
+            
+                    
+                    Annotated
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.3.1" >
+            
+                <span>
+            
+                    
+                    Adt
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.3.1.1" >
+            
+                <span>
+            
+                    
+                    Union
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.3.1.1.1" >
+            
+                <span>
+            
+                    
+                    Derivations
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.2" >
+            
+                <span>
+            
+                    
+                    Concurrency
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.3.2.1" >
+            
+                <span>
+            
+                    
+                    Future
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.2.2" >
+            
+                <span>
+            
+                    
+                    Task
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.3" >
+            
+                <span>
+            
+                    
+                    Conversions
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.4" >
+            
+                <span>
+            
+                    
+                    Core
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.3.4.1" >
+            
+                <span>
+            
+                    
+                    Lambda
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.4.2" >
+            
+                <span>
+            
+                    
+                    Object
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.5" >
+            
+                <span>
+            
+                    
+                    Fantasy Land
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.6" >
+            
+                <span>
+            
+                    
+                    Helpers
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.7" >
+            
+                <span>
+            
+                    
+                    Maybe
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.8" >
+            
+                <span>
+            
+                    
+                    Result
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.3.9" >
+            
+                <span>
+            
+                    
+                    Validation
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.4" >
+            
+                <span>
+            
+                    
+                    Concurrency
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.4.1" >
+            
+                <span>
+            
+                    
+                    Future
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.4.2" >
+            
+                <span>
+            
+                    
+                    Task
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.5" >
+            
+                <span>
+            
+                    
+                    Conversions
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.6" >
+            
+                <span>
+            
+                    
+                    Core
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.16.6.1" >
+            
+                <span>
+            
+                    
+                    Lambda
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.6.2" >
+            
+                <span>
+            
+                    
+                    Object
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.7" >
+            
+                <span>
+            
+                    
+                    Fantasy Land
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.8" >
+            
+                <span>
+            
+                    
+                    Helpers
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.9" >
+            
+                <span>
+            
+                    
+                    Maybe
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.10" >
+            
+                <span>
+            
+                    
+                    Result
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.16.11" >
+            
+                <span>
+            
+                    
+                    Validation
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.17" data-path="../../../../3-前端/node_modules/fs.realpath/README.md">
+            
+                <span>
+            
+                    
+                    Fs.Realpath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18" data-path="../../../../3-前端/node_modules/gitbook-plugin-anchor-navigation-ex/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Anchor Navigation Ex
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.18.1" >
+            
+                <span>
+            
+                    
+                    Assets
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.18.1.1" >
+            
+                <span>
+            
+                    
+                    Lib
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18.1.2" >
+            
+                <span>
+            
+                    
+                    Style
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18.2" >
+            
+                <span>
+            
+                    
+                    Doc
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.18.2.1" data-path="../../../../3-前端/node_modules/gitbook-plugin-anchor-navigation-ex/doc/README_EN.md">
+            
+                <span>
+            
+                    
+                    README EN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18.2.2" data-path="../../../../3-前端/node_modules/gitbook-plugin-anchor-navigation-ex/doc/config-en.md">
+            
+                <span>
+            
+                    
+                    Config En
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18.2.3" data-path="../../../../3-前端/node_modules/gitbook-plugin-anchor-navigation-ex/doc/config.md">
+            
+                <span>
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18.2.4" data-path="../../../../3-前端/node_modules/gitbook-plugin-anchor-navigation-ex/doc/effectScreenshot.md">
+            
+                <span>
+            
+                    
+                    EffectScreenshot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18.2.5" >
+            
+                <span>
+            
+                    
+                    Images
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18.2.6" data-path="../../../../3-前端/node_modules/gitbook-plugin-anchor-navigation-ex/doc/updateRecord-en.md">
+            
+                <span>
+            
+                    
+                    UpdateRecord En
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.18.2.7" data-path="../../../../3-前端/node_modules/gitbook-plugin-anchor-navigation-ex/doc/updateRecord.md">
+            
+                <span>
+            
+                    
+                    UpdateRecord
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.19" data-path="../../../../3-前端/node_modules/gitbook-plugin-anchors/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Anchors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.19.1" >
+            
+                <span>
+            
+                    
+                    Assets
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.20" data-path="../../../../3-前端/node_modules/gitbook-plugin-donate/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Donate
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.20.1" >
+            
+                <span>
+            
+                    
+                    Assets
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.21" data-path="../../../../3-前端/node_modules/gitbook-plugin-expandable-chapters-small/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Expandable Chapters Small
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.21.1" >
+            
+                <span>
+            
+                    
+                    Book
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.22" data-path="../../../../3-前端/node_modules/gitbook-plugin-favicon/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Favicon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.22.1" data-path="../../../../3-前端/node_modules/gitbook-plugin-favicon/CHANGELOG.md">
+            
+                <span>
+            
+                    
+                    CHANGELOG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.22.2" >
+            
+                <span>
+            
+                    
+                     Layouts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.22.2.1" >
+            
+                <span>
+            
+                    
+                    Website
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.23" data-path="../../../../3-前端/node_modules/gitbook-plugin-github-buttons/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Github Buttons
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.23.1" >
+            
+                <span>
+            
+                    
+                     Layouts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.23.1.1" >
+            
+                <span>
+            
+                    
+                    Website
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.23.2" >
+            
+                <span>
+            
+                    
+                    Lib
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.23.3" >
+            
+                <span>
+            
+                    
+                    Src
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.24" data-path="../../../../3-前端/node_modules/gitbook-plugin-github/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Github
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.24.1" >
+            
+                <span>
+            
+                    
+                    Assets
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.25" data-path="../../../../3-前端/node_modules/gitbook-plugin-sharing-plus/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Sharing Plus
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.25.1" >
+            
+                <span>
+            
+                    
+                    Assets
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.26" data-path="../../../../3-前端/node_modules/gitbook-plugin-splitter/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Splitter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.26.1" >
+            
+                <span>
+            
+                    
+                    Book
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.27" data-path="../../../../3-前端/node_modules/gitbook-plugin-summary/README.md">
+            
+                <span>
+            
+                    
+                    Gitbook Plugin Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.28" data-path="../../../../3-前端/node_modules/github-slugid/README.md">
+            
+                <span>
+            
+                    
+                    Github Slugid
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.28.1" >
+            
+                <span>
+            
+                    
+                    Test
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.29" data-path="../../../../3-前端/node_modules/glob/README.md">
+            
+                <span>
+            
+                    
+                    Glob
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.30" data-path="../../../../3-前端/node_modules/htmlparser2/README.md">
+            
+                <span>
+            
+                    
+                    Htmlparser2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.30.1" >
+            
+                <span>
+            
+                    
+                    Lib
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.31" data-path="../../../../3-前端/node_modules/immutable-ext/README.md">
+            
+                <span>
+            
+                    
+                    Immutable Ext
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.31.1" >
+            
+                <span>
+            
+                    
+                    Browser Dist
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.31.2" >
+            
+                <span>
+            
+                    
+                    Test
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.32" data-path="../../../../3-前端/node_modules/immutable/README.md">
+            
+                <span>
+            
+                    
+                    Immutable
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.32.1" >
+            
+                <span>
+            
+                    
+                    Contrib
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.32.1.1" data-path="../../../../3-前端/node_modules/immutable/contrib/cursor/README.md">
+            
+                <span>
+            
+                    
+                    Cursor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.32.1.1.1" >
+            
+                <span>
+            
+                    
+                      Tests  
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.32.2" >
+            
+                <span>
+            
+                    
+                    Dist
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.33" data-path="../../../../3-前端/node_modules/inflight/README.md">
+            
+                <span>
+            
+                    
+                    Inflight
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.34" data-path="../../../../3-前端/node_modules/inherits/README.md">
+            
+                <span>
+            
+                    
+                    Inherits
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.35" data-path="../../../../3-前端/node_modules/lodash.assignin/README.md">
+            
+                <span>
+            
+                    
+                    Lodash.Assignin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.36" data-path="../../../../3-前端/node_modules/lodash.bind/README.md">
+            
+                <span>
+            
+                    
+                    Lodash.Bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.37" data-path="../../../../3-前端/node_modules/lodash.defaults/README.md">
+            
+                <span>
+            
+                    
+                    Lodash.Defaults
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.38" data-path="../../../../3-前端/node_modules/lodash.filter/README.md">
+            
+                <span>
+            
+                    
+                    Lodash.Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.39" data-path="../../../../3-前端/node_modules/lodash.flatten/README.md">
+            
+                <span>
+            
+                    
+                    Lodash.Flatten
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.40" data-path="../../../../3-前端/node_modules/lodash.foreach/README.md">
+            
+                <span>
+            
+                    
+                    Lodash.Foreach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.41" data-path="../../../../3-前端/node_modules/lodash.map/README.md">
+            
+                <span>
+            
+                    
+                    Lodash.Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">编程语言</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" >
+            
+                <span>
+            
+                    
+                    工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1.1" data-path="../../1-工具/日志管理_loguru.html">
+            
+                <a href="../../1-工具/日志管理_loguru.html">
+            
+                    
+                    日志管理 Loguru
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" >
+            
+                <span>
+            
+                    
+                    爬虫
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.2.1" data-path="../../2-爬虫/pachong.html">
+            
+                <a href="../../2-爬虫/pachong.html">
+            
+                    
+                    Pachong
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" >
+            
+                <span>
+            
+                    
+                    高性能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.3.1" >
+            
+                <span>
+            
+                    
+                    协程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="5.1.3.1.1" data-path="1-协程介绍.html">
+            
+                <a href="1-协程介绍.html">
+            
+                    
+                    协程介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Read</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../../Read/README1.html">
+            
+                <a href="../../../../Read/README1.html">
+            
+                    
+                    README1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">问题</li>
+        
+        
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >协程介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x4ECB;"><b></b>&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#&#x5386;&#x53F2;"><b></b>&#x5386;&#x53F2;</a></li><li><span class="title-icon "></span><a href="#&#x7B80;&#x5355;&#x6D4B;&#x8BD5;"><b></b>&#x7B80;&#x5355;&#x6D4B;&#x8BD5;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h2>
+<p>&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x8BA4;&#x4E3A;&#x7EBF;&#x7A0B;&#x662F;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x4E5F;&#x628A;&#x534F;&#x7A0B;&#x7406;&#x89E3;&#x4E3A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x7EBF;&#x7A0B;&#x5373;&#x5FAE;&#x7EBF;&#x7A0B;&#x3002;
+&#x901A;&#x5E38;&#x5728;Python&#x4E2D;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x591A;&#x7EBF;&#x7A0B;&#x6216;&#x8005;&#x591A;&#x8FDB;&#x7A0B;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5BF9;&#x4E8E;&#x8BA1;&#x7B97;&#x578B;&#x4EFB;&#x52A1;&#x7531;&#x4E8E;GIL&#x7684;&#x5B58;&#x5728;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x591A;&#x8FDB;&#x7A0B;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;IO&#x578B;&#x4EFB;&#x52A1;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7EBF;&#x7A0B;&#x8C03;&#x5EA6;&#x6765;&#x8BA9;&#x7EBF;&#x7A0B;&#x5728;&#x6267;&#x884C;IO&#x4EFB;&#x52A1;&#x65F6;&#x8BA9;&#x51FA;GIL&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x8868;&#x9762;&#x4E0A;&#x7684;&#x5E76;&#x53D1;&#x3002;&#x5176;&#x5B9E;&#x5BF9;&#x4E8E;IO&#x578B;&#x4EFB;&#x52A1;&#x6211;&#x4EEC;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x9009;&#x62E9;&#x5C31;&#x662F;&#x534F;&#x7A0B;&#xFF0C;&#x534F;&#x7A0B;&#x662F;&#x8FD0;&#x884C;&#x5728;&#x5355;&#x7EBF;&#x7A0B;&#x5F53;&#x4E2D;&#x7684;&quot;&#x5E76;&#x53D1;&quot;&#xFF0C;&#x534F;&#x7A0B;&#x76F8;&#x6BD4;&#x591A;&#x7EBF;&#x7A0B;&#x4E00;&#x5927;&#x4F18;&#x52BF;&#x5C31;&#x662F;&#x7701;&#x53BB;&#x4E86;&#x591A;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x5207;&#x6362;&#x5F00;&#x9500;&#xFF0C;&#x83B7;&#x5F97;&#x4E86;&#x66F4;&#x5927;&#x7684;&#x8FD0;&#x884C;&#x6548;&#x7387;&#x3002;</p>
+<p>&#x534F;&#x7A0B;&#xFF0C;&#x53C8;&#x79F0;&#x5FAE;&#x7EBF;&#x7A0B;&#xFF0C;&#x7EA4;&#x7A0B;&#xFF0C;&#x82F1;&#x6587;&#x540D;Coroutine&#x3002;&#x534F;&#x7A0B;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5728;&#x6267;&#x884C;&#x51FD;&#x6570;A&#x65F6;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x4E2D;&#x65AD;&#x53BB;&#x6267;&#x884C;&#x51FD;&#x6570;B&#xFF0C;&#x7136;&#x540E;&#x4E2D;&#x65AD;&#x51FD;&#x6570;B&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x51FD;&#x6570;A&#xFF08;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5207;&#x6362;&#xFF09;&#x3002;&#x4F46;&#x8FD9;&#x4E00;&#x8FC7;&#x7A0B;&#x5E76;&#x4E0D;&#x662F;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;&#x8FD9;&#x4E00;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x770B;&#x4F3C;&#x50CF;&#x591A;&#x7EBF;&#x7A0B;&#xFF0C;&#x7136;&#x800C;&#x534F;&#x7A0B;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x90A3;&#x534F;&#x7A0B;&#x6709;&#x4EC0;&#x4E48;&#x4F18;&#x52BF;&#x5462;&#xFF1F;</p>
+<p>&#x6267;&#x884C;&#x6548;&#x7387;&#x6781;&#x9AD8;&#xFF0C;&#x56E0;&#x4E3A;&#x5B50;&#x7A0B;&#x5E8F;&#x5207;&#x6362;&#xFF08;&#x51FD;&#x6570;&#xFF09;&#x4E0D;&#x662F;&#x7EBF;&#x7A0B;&#x5207;&#x6362;&#xFF0C;&#x7531;&#x7A0B;&#x5E8F;&#x81EA;&#x8EAB;&#x63A7;&#x5236;&#xFF0C;&#x6CA1;&#x6709;&#x5207;&#x6362;&#x7EBF;&#x7A0B;&#x7684;&#x5F00;&#x9500;&#x3002;&#x6240;&#x4EE5;&#x4E0E;&#x591A;&#x7EBF;&#x7A0B;&#x76F8;&#x6BD4;&#xFF0C;&#x7EBF;&#x7A0B;&#x7684;&#x6570;&#x91CF;&#x8D8A;&#x591A;&#xFF0C;&#x534F;&#x7A0B;&#x6027;&#x80FD;&#x7684;&#x4F18;&#x52BF;&#x8D8A;&#x660E;&#x663E;&#x3002;
+&#x4E0D;&#x9700;&#x8981;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x9501;&#x673A;&#x5236;&#xFF0C;&#x56E0;&#x4E3A;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x4E5F;&#x4E0D;&#x5B58;&#x5728;&#x540C;&#x65F6;&#x5199;&#x53D8;&#x91CF;&#x51B2;&#x7A81;&#xFF0C;&#x5728;&#x63A7;&#x5236;&#x5171;&#x4EAB;&#x8D44;&#x6E90;&#x65F6;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x9501;&#xFF0C;&#x56E0;&#x6B64;&#x6267;&#x884C;&#x6548;&#x7387;&#x9AD8;&#x5F88;&#x591A;&#x3002;
+&#x534F;&#x7A0B;&#x53EF;&#x4EE5;&#x5904;&#x7406;IO&#x5BC6;&#x96C6;&#x578B;&#x7A0B;&#x5E8F;&#x7684;&#x6548;&#x7387;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x5904;&#x7406;CPU&#x5BC6;&#x96C6;&#x578B;&#x4E0D;&#x662F;&#x5B83;&#x7684;&#x957F;&#x5904;&#xFF0C;&#x5982;&#x8981;&#x5145;&#x5206;&#x53D1;&#x6325;CPU&#x5229;&#x7528;&#x7387;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x591A;&#x8FDB;&#x7A0B;+&#x534F;&#x7A0B;&#x3002;</p>
+<h2 id="&#x5386;&#x53F2;"><a name="&#x5386;&#x53F2;" class="anchor-navigation-ex-anchor" href="#&#x5386;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5386;&#x53F2;" class="plugin-anchor" href="#&#x5386;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5386;&#x53F2;</h2>
+<p>python 2.4&#x7248;&#x672C;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">yield</span> 
+send gevent
+</code></pre>
+<p>python 3.4&#x7248;&#x672C;</p>
+<pre><code class="lang-python">asyncio 
+<span class="hljs-keyword">yield</span> <span class="hljs-keyword">from</span> (python3<span class="hljs-number">.4</span>+)
+</code></pre>
+<p>&#x5728;Python3.5&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x4F7F;&#x7528;</p>
+<pre><code>async # &#x628A;@asyncio.coroutine&#x66FF;&#x6362;&#x4E3A;async
+await # &#x628A;yield from&#x66FF;&#x6362;&#x4E3A;awai
+</code></pre><h2 id="&#x7B80;&#x5355;&#x6D4B;&#x8BD5;"><a name="&#x7B80;&#x5355;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x5355;&#x6D4B;&#x8BD5;" class="plugin-anchor" href="#&#x7B80;&#x5355;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x5355;&#x6D4B;&#x8BD5;</h2>
+<pre><code class="lang-python"><span class="hljs-comment">#-*- coding:utf8 -*-</span>
+<span class="hljs-keyword">import</span> asyncio
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test</span><span class="hljs-params">(i)</span>:</span>
+    print(<span class="hljs-string">&apos;test_1&apos;</span>, i)
+    <span class="hljs-keyword">await</span> asyncio.sleep(<span class="hljs-number">1</span>)
+    print(<span class="hljs-string">&apos;test_2&apos;</span>, i)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    loop = asyncio.get_event_loop()
+    tasks = [test(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>)]
+    loop.run_until_complete(asyncio.wait(tasks))
+    loop.close()
+</code></pre>
+<p>&#x53C2;&#x8003; <a href="https://zhuanlan.zhihu.com/p/104918655" target="_blank">https://zhuanlan.zhihu.com/p/104918655</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../../../../Read/README1.html" class="navigation navigation-next navigation-unique" aria-label="Next page: README1">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"协程介绍","level":"5.1.3.1.1","depth":4,"next":{"title":"README1","level":"6.1","depth":1,"path":"Read/README1.md","ref":"Read/README1.md","articles":[]},"previous":{"title":"协程","level":"5.1.3.1","depth":3,"ref":"","articles":[{"title":"协程介绍","level":"5.1.3.1.1","depth":4,"path":"4-编程语言/python/高性能/1-协程/1-协程介绍.md","ref":"4-编程语言/python/高性能/1-协程/1-协程介绍.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","summary","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/ycpan"},"livereload":{},"summary":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.png","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"ycpan","repo":"mybook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"ycpan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"潘勇灿的book","language":"zh-hans","links":{"sidebar":{"我的主页":"https://ycpan.github.io/mybook/"}},"gitbook":"3.2.3","description":"探索知识的海洋"},"file":{"path":"4-编程语言/python/高性能/1-协程/1-协程介绍.md","mtime":"2022-04-25T02:13:59.006Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-30T14:01:24.812Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
